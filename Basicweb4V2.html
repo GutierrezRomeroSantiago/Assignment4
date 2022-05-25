@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./header.css">
+<title>BasicWeb</title>
+</head>
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<body onload="startTime()" id="body" class="body container">
+    <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+    </script>
+
+ <!-- Nuevo header -->
+ <div class="container">
+    <script>
+      function darkMode(){
+          var a = document.getElementById("body");
+          if(a.classList.contains("bodyDark")){
+              document.getElementById("head").classList.replace("theheadDark", "thehead");
+              document.getElementById("body").classList.replace("bodyDark", "body");
+          } else {
+          document.getElementById("body").classList.replace("body", "bodyDark");
+          document.getElementById("head").classList.replace("thehead", "theheadDark");
+          }   
+      }
+  </script>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">
+          <h1><b>Santiago Gutiérrez Romero</b></h1>
+          <p>IT student</p>
+        </span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="./BasicwebV2.html" class="nav-link active" aria-current="page">About me</a></li>
+        <li class="nav-item"><a href="./Basicweb1V2.html" class="nav-link">Resume</a></li>
+        <li class="nav-item"><a href="./Basicweb2V2.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="./Basicweb3V2.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="./Basicweb4V2.html" class="nav-link">Gallery</a></li>
+      </ul>
+      <div class="buttonPosition">
+        <a class="buttondarmode" onclick="darkMode()">
+        <img id="hoverin" class="image" src="./darkmode.png">
+        </a>
+        <b>
+          <div id="txt"></div>
+          </b>
+      </div>
+    </header>
+  </div>
+  <!-- Fin header -->
+
+    
+  <main>
+
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">This gallerie show some of the most important monuments around the world</h1>
+        </div>
+      </div>
+
+  
+    <div class="album py-5 bg-light">
+      <div class="container">
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./seville.png"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  
+              <div class="card-body">
+                <p class="card-text">The Giralda tower, Seville</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./berlin.png"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  
+              <div class="card-body">
+                <p class="card-text">Berlin monuments</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./world.png"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  
+              <div class="card-body">
+                <p class="card-text">The world globe</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./white.png"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  
+              <div class="card-body">
+                <p class="card-text">The white house</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./statue.png"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  
+              <div class="card-body">
+                <p class="card-text">The Statue of liberty</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="30" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="./barce.png"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+  
+              <div class="card-body">
+                <p class="card-text">Barcelona Cathedral</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  
+    <hr>
+
+  </main>
+
+
+<div class="container">
+    <footer style="margin-left: 10vw"  class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item mb-2 label">Front-end</li>
+        <li class="nav-item mb-2 label">Typescript</li>
+        <li class="nav-item mb-2 label">Windows</li>
+        <li class="nav-item mb-2 label">Back-end</li>
+        <li class="nav-item mb-2 label">Javascript</li>
+        <li class="nav-item mb-2 label">React</li>
+        <li class="nav-item mb-2 label">Operatives Systems</li>
+        <li class="nav-item mb-2 label">Linux</li>
+        <li class="nav-item mb-2 label">Node.js</li>
+        <li class="nav-item mb-2 label">PhP</li>
+        <li class="nav-item mb-2 label">Angular.js</li>
+        <li class="nav-item mb-2 label">Object-Oriented Programming</li>
+      </ul>
+    </footer>
+    <p class="text-center text-muted">Proyect done by Santiago Gutiérrez Romero</p>
+  </div>
+</body>
+
+</html>

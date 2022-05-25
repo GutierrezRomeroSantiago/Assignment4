@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./header.css">
+<title>BasicWeb</title>
+</head>
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<body onload="startTime()" id="body" class="body">
+    <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+    </script>
+
+ <!-- Nuevo header -->
+ <div class="container">
+    <script>
+      function darkMode(){
+          var a = document.getElementById("body");
+          if(a.classList.contains("bodyDark")){
+              document.getElementById("head").classList.replace("theheadDark", "thehead");
+              document.getElementById("body").classList.replace("bodyDark", "body");
+          } else {
+          document.getElementById("body").classList.replace("body", "bodyDark");
+          document.getElementById("head").classList.replace("thehead", "theheadDark");
+          }   
+      }
+  </script>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">
+          <h1><b>Santiago Gutiérrez Romero</b></h1>
+          <p>IT student</p>
+        </span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="./BasicwebV2.html" class="nav-link active" aria-current="page">About me</a></li>
+        <li class="nav-item"><a href="./Basicweb1V2.html" class="nav-link">Resume</a></li>
+        <li class="nav-item"><a href="./Basicweb2V2.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="./Basicweb3V2.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="./Basicweb4V2.html" class="nav-link">Gallery</a></li>
+      </ul>
+      <div class="buttonPosition">
+        <a class="buttondarmode" onclick="darkMode()">
+        <img id="hoverin" class="image" src="./darkmode.png">
+        </a>
+        <b>
+          <div id="txt"></div>
+          </b>
+      </div>
+    </header>
+  </div>
+  <!-- Fin header -->
+
+    <script type="text/javascript">
+        alert("The following page is under construction and contain personal information.\n\nPlease, do not use it for any other purpose.");
+    </script>
+    
+<main>
+
+    <script  type="text/javascript">
+        function changeContainer(){
+            
+
+            var x = document.getElementById("linked")
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                    document.getElementById("Container").classList.replace("mainContainerExpanded", "mainContainer");
+                  } else {
+                    x.style.display = "block";
+                    document.getElementById("Container").classList.replace("mainContainer", "mainContainerExpanded");
+                  }
+        }
+    </script>
+
+
+    <div id="Container" class="container" style="background: rgb(255, 255, 255); box-shadow: 5px 5px 5px rgb(75, 92, 97)">
+        <div class="insideContainer">
+            <h3 style="margin: 5px;"><b>About Me</b></h3>
+            <p>I am Santiago Gutiérrez Romero and I am 24 years old, I come from Seville a city located in the south of Spain, 
+            I consider my self as easygoing person, open-minded, straightforward and with a big motivation. My main hobbies are spending 
+            time with friends and practicing sport in the middle of the nature, but I also like to hang out and know new people.</p>
+                <a onclick="changeContainer()">
+                    <img id="hoverinArrow" class="image" src="./downArrow.jpg">
+                </a>
+            <div class="buttondarmode" id="linked" style="display: none;">
+                <a href="https://www.linkedin.com/in/santiago-guti%C3%A9rrez-romero-30110a226">
+                <img id="hoverinArrowLinked" class="image2" src="./linked.png">
+                </a>
+                <a href="https://eutechengineers.com/">
+                    <img id="hoverinArrowEu" class="image3" src="./eutech.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+<hr>
+</main>
+
+
+<div class="container">
+    <footer style="margin-left: 10vw"  class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item mb-2 label">Front-end</li>
+        <li class="nav-item mb-2 label">Typescript</li>
+        <li class="nav-item mb-2 label">Windows</li>
+        <li class="nav-item mb-2 label">Back-end</li>
+        <li class="nav-item mb-2 label">Javascript</li>
+        <li class="nav-item mb-2 label">React</li>
+        <li class="nav-item mb-2 label">Operatives Systems</li>
+        <li class="nav-item mb-2 label">Linux</li>
+        <li class="nav-item mb-2 label">Node.js</li>
+        <li class="nav-item mb-2 label">PhP</li>
+        <li class="nav-item mb-2 label">Angular.js</li>
+        <li class="nav-item mb-2 label">Object-Oriented Programming</li>
+      </ul>
+    </footer>
+    <p class="text-center text-muted">Proyecto realizado por Santiago Gutiérrez Romero</p>
+  </div>
+</body>
+
+</html>
